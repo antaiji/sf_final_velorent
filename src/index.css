@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Finlandica:wght@400;500;600;700&display=swap");
+
+/* --------------------------------
+# variables
+-------------------------------- */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --grey-100: hsl(220, 14%, 96%);
+  --grey-200: hsl(220, 14%, 90%);
+  --grey-300: hsl(220, 12%, 84%);
+  --grey-400: hsl(220, 11%, 65%);
+  --grey-500: hsl(220, 9%, 46%);
+  --grey-600: hsl(220, 14%, 34%);
+  --grey-650: hsl(220, 14%, 22%);
+  --grey-800: hsl(220, 28%, 18%);
+
+  --sky-blue-200: hsl(200, 98%, 46%);
+  --sky-blue-300: hsl(200, 98%, 38%);
+  --sky-blue-750: hsl(202, 83%, 21%);
+  --sky-blue-800: hsl(202, 80%, 17%);
+
+  --emerald-50: hsl(85, 85%, 90%);
+  --emerald-100: hsl(85, 85%, 80%);
+  --emerald-500: hsl(85, 85%, 36%);
+  --emerald-600: hsl(85, 82%, 32%);
+
+  --orange-500: hsl(21, 90%, 54%);
+  --orange-600: hsl(21, 90%, 46%);
+
+  --ruby-50: hsl(347, 78%, 95%);
+  --ruby-100: hsl(347, 78%, 82%);
+  --ruby-500: hsl(347, 78%, 54%);
+  --ruby-600: hsl(347, 78%, 46%);
+
+  --font-main: "Finlandica", sans-serif;
+}
+
+/* --------------------------------
+# base
+-------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--grey-100);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+::placeholder {
+  color: var(--grey-400);
+}
+
+.main {
+  min-height: calc(100vh - 62px);
+}
+
+.btn {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* --------------------------------
+# container
+-------------------------------- */
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* --------------------------------
+# grid
+-------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 15px;
+}
+
+/* --------------------------------
+# common
+-------------------------------- */
+.common_title {
+  margin-top: 160px;
+  grid-column: 1 / span 24;
+  border: 1px solid var(--grey-300);
+  border-radius: 4px;
+  padding: 30px;
+  background-color: var(--white);
+  font-size: 32px;
+  text-align: center;
+  color: var(--grey-600);
+  margin-bottom: 30px;
+}
+
+.common_info {
+  grid-column: span 24;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--grey-500);
+}
+
+.common_item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column: span 8;
+  border: 1px solid var(--grey-300);
+  border-radius: 4px;
+  padding: 20px;
+  background-color: var(--white);
+}
+
+.common_item-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.common_item-title {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--grey-500);
+}
+
+.common_item-info {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--grey-800);
+}
+
+.common_item-hr {
+  height: 1px;
+  border: none;
+  background-color: var(--grey-300);
+}
+
+.common_item-button {
+  display: flex;
+  gap: 20px;
+}
+
+.common_btn-wrapper {
+  flex-grow: 1;
+  width: 45%;
+}
+
+.common_btn {
+  width: 100%;
+  color: var(--white);
+  transition: background-color 0.3s ease-in;
+}
+
+.common_btn-more {
+  background-color: var(--sky-blue-300);
+}
+
+.common_btn-delete {
+  background-color: var(--ruby-600);
+}
+
+.common_btn-more:hover {
+  background-color: var(--sky-blue-200);
+}
+
+.common_btn-delete:hover {
+  background-color: var(--ruby-500);
+}
+
+/* --------------------------------
+# form
+-------------------------------- */
+.form_container {
+  margin-top: 160px;
+  margin-bottom: 60px;
+  grid-column: 5/21;
+  border: 1px solid var(--grey-300);
+  border-radius: 4px;
+  padding: 30px;
+  background-color: var(--white);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form_label {
+  display: block;
+  margin-bottom: 2px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--grey-500);
+}
+
+.form_input {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grey-650);
+  background-color: var(--white);
+  line-height: 1;
+  padding: 10px 16px;
+  border: 1px solid var(--grey-300);
+  border-radius: 4px;
+}
+
+.form_input[disabled] {
+  color: var(--grey-500);
+}
+
+.form_checkbox {
+  margin: 14px 0 0 10px;
+}
+
+.form_input:focus,
+.form_input:active {
+  border: 1px solid var(--sky-blue-300);
+  outline: none;
+}
+
+.form_input-warning,
+.form_input-warning:focus,
+.form_input-warning:active {
+  background-color: var(--ruby-50);
+  border: 1px solid var(--ruby-500);
+}
+
+.form_input-error-wrapper {
+  width: 100%;
+  min-height: 24px;
+}
+
+.form_input-error {
+  line-height: 1.5;
+  color: var(--ruby-500);
+  font-size: 15px;
+}
+
+.form_title {
+  font-size: 32px;
+  text-align: center;
+  color: var(--grey-600);
+  margin-bottom: 40px;
+}
+
+.form_selector {
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--grey-600);
+  text-align: center;
+}
+
+.form_switch {
+  cursor: pointer;
+  font-weight: 500;
+  color: hsl(252, 98%, 36%);
+}
+
+.btn.form_btn {
+  margin-top: 28px;
+  padding: 15px;
+  font-size: 18px;
+  background-color: var(--emerald-600);
+  color: var(--white);
+  transition: background-color 0.3s ease-in;
+}
+
+.form_btn:hover {
+  background-color: var(--emerald-500);
+}
+
+.form_btn:disabled {
+  background-color: var(--grey-400);
+}
+
+.form_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-height: 64px;
+  font-family: inherit;
+  font-size: 17px;
+  color: var(--grey-800);
+  line-height: 1.2;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.form_info-success {
+  background-color: var(--emerald-50);
+  border: 1px solid var(--emerald-100);
+}
+
+.form_info-error {
+  background-color: var(--ruby-50);
+  border: 1px solid var(--ruby-100);
+}
+
+/* --------------------------------
+# media
+-------------------------------- */
+@media (max-width: 991px) {
+  .common_item {
+    grid-column: span 12;
+  }
+
+  .form_container {
+    grid-column: 4/22;
+  }
+}
+
+@media (max-width: 767px) {
+  .common_item {
+    grid-column: 2 / span 22;
+  }
+
+  .form_container {
+    grid-column: 3/23;
+  }
+}
+
+@media (max-width: 575px) {
+  .common_item {
+    grid-column: 1 / span 24;
+  }
+
+  .form_container {
+    grid-column: 1/25;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 10px 2px;
+  }
+}

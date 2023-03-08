@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  background-color: var(--sky-blue-800);
+}
+
+.footer_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 62px;
+}
+
+.footer_info {
+  font-size: 15px;
+  color: var(--grey-100);
+}

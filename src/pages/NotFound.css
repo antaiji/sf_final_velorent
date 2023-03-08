@@ -1,0 +1,28 @@
+.nfpage_container {
+  margin-top: 160px;
+  grid-column: 1 / span 24;
+  padding: 30px;
+  text-align: center;
+}
+
+.nfpage_title {
+  font-size: 48px;
+  text-align: center;
+  color: var(--grey-500);
+  margin-bottom: 30px;
+}
+
+.nfpage_info {
+  padding: 20px 40px;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.nfpage_btn {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--sky-blue-750);
+  text-decoration: underline;
+  cursor: pointer;
+}

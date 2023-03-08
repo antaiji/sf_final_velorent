@@ -1,0 +1,17 @@
+.slider_container {
+  width: 100%;
+  border-radius: 12px 60px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.64);
+}
+
+.slider_slide {
+  overflow: hidden;
+}
+
+.slider_img {
+  height: 480px;
+  width: 100%;
+  object-fit: cover;
+}
